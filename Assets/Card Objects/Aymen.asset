@@ -1,0 +1,16 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 277c5dd6d94ea914d89e7cf87292c987, type: 3}
+  m_Name: Aymen
+  m_EditorClassIdentifier: Assembly-CSharp::NewMonoBehaviourScript
+  Name: Aymen
+  CardSprite: {fileID: 324191255076673018, guid: 37a2e08599c00e341ba149e22967b81d, type: 3}

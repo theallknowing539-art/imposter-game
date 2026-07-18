@@ -1,16 +1,8 @@
 using UnityEngine;
-
-public class NewMonoBehaviourScript : MonoBehaviour
+using UnityEngine.UI;
+[CreateAssetMenu(fileName = "Player Card",menuName = "ScriptableObjects/Cards")]
+public class Card : ScriptableObject
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    public string Name;
+    public Sprite CardSprite;
 }
