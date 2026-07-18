@@ -171,7 +171,7 @@ public class StateMachine : MonoBehaviour
         }
     }
 
-    public void OnNextButtonClicked()
+  public void OnNextButtonClicked()
     {
         if (currentPhase == Phase.ViewingCard)
         {
@@ -184,12 +184,26 @@ public class StateMachine : MonoBehaviour
             else
             {
                 currentPhase = Phase.Talking;
-                firstSpeakerIndex = Random.Range(0, activeDeck.Length);
+                
+                // --- NEW LOGIC: Only pick a random "Simple" player to speak first ---
+                List<int> simplePlayers = new List<int>();
+                
+                for (int i = 0; i < playerCount; i++)
+                {
+                    if (playerRoles[i] == Role.Simple)
+                    {
+                        simplePlayers.Add(i); // Add the index of this Simple player to our pool
+                    }
+                }
+                
+                // Pick a random index from our safe pool
+                int randomListIndex = Random.Range(0, simplePlayers.Count);
+                firstSpeakerIndex = simplePlayers[randomListIndex];
+                // --------------------------------------------------------------------
             }
             UpdateUI();
         }
     }
-
     // Connect this to your "Reveal Imposter" button inside the Talking Panel
     public void OnRevealButtonClicked()
     {
@@ -212,10 +226,10 @@ public class StateMachine : MonoBehaviour
         {
             case Phase.PassingPhone:
                 TopText.text = $"Pass phone to {activeDeck[currentPlayerIndex].Name}.";
-                RoleText.text = ""; 
+                RoleText.text = "Tap to reveal secret"; 
                 SecretText.text = "";
                 CardImage.gameObject.SetActive(true);
-                CardImage.sprite = null; 
+                CardImage.sprite = activeDeck[currentPlayerIndex].CardSprite; 
                 BigCardButton.gameObject.SetActive(true);
                 BigCardButton.interactable = true;      
                 NextButton.gameObject.SetActive(false); 
@@ -231,19 +245,19 @@ public class StateMachine : MonoBehaviour
                 break;
 
             case Phase.Talking:
-                TopText.text = "Discussion Phase!";
-                RoleText.text = "";
-                SecretText.text = "";
-                
-                // Hide the main game UI
+                // Hide game UI
                 CardImage.gameObject.SetActive(false);
                 BigCardButton.gameObject.SetActive(false);
                 NextButton.gameObject.SetActive(false);
 
-                // Show the Talking Panel and the first speaker's card
+                // Show Talking Panel
                 TalkingPanel.SetActive(true);
+                RevealPanel.SetActive(false);
+                
+                TopText.text = "Discussion Phase!";
                 TalkingPlayerImage.sprite = activeDeck[firstSpeakerIndex].CardSprite;
                 RoleText.text = $"{activeDeck[firstSpeakerIndex].Name} starts the discussion!";
+                SecretText.text = "";
                 break;
 
             case Phase.Reveal:
@@ -252,19 +266,18 @@ public class StateMachine : MonoBehaviour
 
                 TopText.text = "Game Over!";
                 RoleText.text = "";
+                SecretText.text = "";
 
-                // Find who the Imposter was
                 int imposterIndex = 0;
                 for (int i = 0; i < playerCount; i++)
                 {
                     if (playerRoles[i] == Role.Imposter)
                     {
                         imposterIndex = i;
-                        break; // Stop looking once we find them
+                        break;
                     }
                 }
 
-                // Show the Imposter's data
                 RevealText.text = $"The Imposter was {activeDeck[imposterIndex].Name}!";
                 ImposterImage.sprite = activeDeck[imposterIndex].CardSprite;
                 break;
