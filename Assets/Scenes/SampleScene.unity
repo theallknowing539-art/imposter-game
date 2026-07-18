@@ -9014,18 +9014,70 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 708bde75c2d3b78449ace9e4ee8bb2b0, type: 2}
   - {fileID: 11400000, guid: 366a63451208d2f4581cd06d2db18966, type: 2}
   secretLibrary:
-  - secretWord: chikh ta3 tefa7a
-    imposterHint: rougi
-  - secretWord: Mourad
-    imposterHint: enderman
-  - secretWord: Aymen
+  - secretWord: 'word : chikh ta3 tefa7a'
+    imposterHint: 'hint : rougi'
+  - secretWord: 'word : Mourad'
+    imposterHint: 'hint : enderman'
+  - secretWord: 'word : Aymen'
     imposterHint: AC millan
-  - secretWord: Chakib
-    imposterHint: milieu
-  - secretWord: feu
-    imposterHint: skhon
-  - secretWord: ba3ziz
-    imposterHint: pizza merguez
+  - secretWord: 'word : Chakib'
+    imposterHint: 'hint : milieu'
+  - secretWord: 'word : feu'
+    imposterHint: 'hint : skhon'
+  - secretWord: 'word : ba3ziz'
+    imposterHint: 'hint : pizza merguez'
+  - secretWord: 'word : sala7'
+    imposterHint: 'hint : khir men luca zidane'
+  - secretWord: 'word : mojito'
+    imposterHint: 'hint : boisson'
+  - secretWord: 'word : 3in lah'
+    imposterHint: 'hint : basketball'
+  - secretWord: 'word : mourad'
+    imposterHint: 'hint : peppoun mfouri'
+  - secretWord: 'word : skin plugin '
+    imposterHint: 'hint : aymen bda yekfer'
+  - secretWord: 'word : rythm'
+    imposterHint: 'hint : bot'
+  - secretWord: 'word : 7ijo'
+    imposterHint: 'hint : cheveu curly'
+  - secretWord: 'word : chikh ta analyse'
+    imposterHint: 'hint : fertas'
+  - secretWord: 'word : roger'
+    imposterHint: 'hint : appel a 23h'
+  - secretWord: 'word : tfa7a'
+    imposterHint: 'hint : jerya'
+  - secretWord: 'word : el padre'
+    imposterHint: 'hint : partiya imposter'
+  - secretWord: 'word : chef jemra'
+    imposterHint: 'hint : les boules'
+  - secretWord: 'word : goudjil'
+    imposterHint: 'hint : kbir chwya '
+  - secretWord: 'word : micheal jackson '
+    imposterHint: 'hint : music f discord'
+  - secretWord: 'word : cheb larbi '
+    imposterHint: 'hint : music f discord'
+  - secretWord: 'word : nutmeg trap'
+    imposterHint: 'hint : foot m3a said'
+  - secretWord: 'word : deadyou'
+    imposterHint: 'hint : bug exorcist'
+  - secretWord: 'word : jnan 9asab'
+    imposterHint: 'hint : stade'
+  - secretWord: 'word : USTHB'
+    imposterHint: 'hint : soufrance'
+  - secretWord: 'word : serbat'
+    imposterHint: 'hint : bleu'
+  - secretWord: 'word : Said'
+    imposterHint: 'hint : goku'
+  - secretWord: 'word : Mourad'
+    imposterHint: 'hint : horror game'
+  - secretWord: 'word : luca zidane'
+    imposterHint: 'hint : mefto7 mlkhr'
+  - secretWord: 'word : mandi'
+    imposterHint: 'hint : frigidaire'
+  - secretWord: 'word : le croquant'
+    imposterHint: 'hint : fromage'
+  - secretWord: 'word : le croquant'
+    imposterHint: 'hint : fromage'
   SetupUIContainer: {fileID: 1868799858}
   PlayerCountInput: {fileID: 770016128}
   PlayerDropdowns:
